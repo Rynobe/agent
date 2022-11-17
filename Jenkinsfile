@@ -15,10 +15,12 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Rynobe/agent.git']]])
             }
         }
+    }
+    stages {
         stage('Kiírás') {
             steps {
                 echo 'Pulling... ' + env.BRANCH_NAME
             }
-        }
+        }   
     }
 }
