@@ -1,12 +1,4 @@
 pipeline {
-    environment {
-        OTP_CDO_DATETIME = "${new Date().format("yyyyMMddHHmm")}"
-    }
-    options {
-        timeout(time: 10, unit: "MINUTES")
-        buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '20', daysToKeepStr: '', numToKeepStr: '20'))
-        timestamps()
-    }
     agent any
     
     stages {
@@ -19,7 +11,7 @@ pipeline {
     stages {
         stage('Kiírás') {
             steps {
-                echo 'Pulling... ' + env.BRANCH_NAME
+                echo 'Hello ez egy teszt'
             }
         }   
     }
