@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Kiírás') {
             steps {
-                echo 'Pulling... ' + env.GIT_BRANCH
+                echo 'Pulling... ' + env.BRANCH_NAME
             }
         }
     }
